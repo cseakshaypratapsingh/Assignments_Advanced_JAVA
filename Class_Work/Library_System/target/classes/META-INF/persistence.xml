@@ -1,0 +1,45 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
+
+    <persistence-unit name="libraryPU">
+
+        <!-- Hibernate is the JPA provider -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Your Entity Class -->
+        <class>com.library.jpa.Book</class>
+
+        <properties>
+
+            <!-- PostgreSQL JDBC Driver -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+            <!-- Database URL -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/learner"/>
+
+            <!-- PostgreSQL username -->
+            <property name="jakarta.persistence.jdbc.user" value="learner"/>
+
+            <!-- PostgreSQL password -->
+            <property name="jakarta.persistence.jdbc.password" value="123"/>
+
+
+            <!-- Hibernate Dialect (VERY IMPORTANT) -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+
+
+            <!-- Automatically create/update tables -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+
+            <!-- Show SQL in console -->
+            <property name="hibernate.show_sql" value="true"/>
+
+            <!-- Format SQL nicely -->
+            <property name="hibernate.format_sql" value="true"/>
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
