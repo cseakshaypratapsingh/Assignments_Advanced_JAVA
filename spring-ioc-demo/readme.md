@@ -1,7 +1,3 @@
-# Assignment: Spring IoC Container – Bean Configuration, Scope, and Lifecycle
-
----
-
 # Problem Statement 1
 
 ## Payment System Using Spring IoC
